@@ -1,2 +1,7 @@
 rank,1,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,123.445374,GFLOPs,556.679,GBs,0.000
 rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,125.183998,GFLOPs,548.948,GBs,0.000
+rank,1,mode,vadd,kernel,vadd,N,10000000,M,0,Nmat,0,K,0,ms_gpu,1.414048,GFLOPs,0.000,GBs,42.431
+rank,0,mode,vadd,kernel,vadd,N,10000000,M,0,Nmat,0,K,0,ms_gpu,0.497600,GFLOPs,0.000,GBs,120.579
+rank,0,mode,reduce,kernel,reduce,N,50000000,M,0,Nmat,0,K,0,ms_gpu,1.429952,GFLOPs,0.000,GBs,0.000
+rank,0,mode,reduce,kernel,reduce,N,50000000,M,0,Nmat,0,K,0,ms_gpu,1.585632,GFLOPs,0.000,GBs,0.000
+rank,1,mode,reduce,kernel,reduce,N,50000000,M,0,Nmat,0,K,0,ms_gpu,1.236288,GFLOPs,0.000,GBs,0.000

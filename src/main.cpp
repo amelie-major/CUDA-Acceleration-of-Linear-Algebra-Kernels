@@ -41,6 +41,7 @@ int main(int argc, char** argv) {
     }
 
     select_gpu_for_rank(info.rank);
+    // A single CUDA stream serialises GPU work on this rank.
     cudaStream_t stream; CUDA_CHECK(cudaStreamCreate(&stream));
 
     std::string csv = args.get("csv", "results.csv");

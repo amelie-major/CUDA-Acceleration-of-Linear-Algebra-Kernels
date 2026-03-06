@@ -2821,3 +2821,141 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1447 (try_compile)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1491 (_MPI_try_staged_settings)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1814 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum"
+      binary: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum'
+        
+        Run Build Command(s): /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2fc08/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_2fc08.dir/build.make CMakeFiles/cmTC_2fc08.dir/build
+        make[1]: Entering directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum'
+        Building CXX object CMakeFiles/cmTC_2fc08.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -std=gnu++17 -pthread -o CMakeFiles/cmTC_2fc08.dir/test_mpi.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum/test_mpi.cpp
+        Linking CXX executable cmTC_2fc08
+        /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fc08.dir/link.txt --verbose=1
+        /usr/bin/c++ -pthread CMakeFiles/cmTC_2fc08.dir/test_mpi.cpp.o -o cmTC_2fc08  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+        make[1]: Leaving directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-WTXRum'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1447 (try_compile)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1841 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi"
+      binary: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi'
+        
+        Run Build Command(s): /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2926a/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_2926a.dir/build.make CMakeFiles/cmTC_2926a.dir/build
+        make[1]: Entering directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi'
+        Building CXX object CMakeFiles/cmTC_2926a.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -std=gnu++17 -pthread -o CMakeFiles/cmTC_2926a.dir/test_mpi.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi/test_mpi.cpp
+        Linking CXX executable cmTC_2926a
+        /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2926a.dir/link.txt --verbose=1
+        /usr/bin/c++ -pthread CMakeFiles/cmTC_2926a.dir/test_mpi.cpp.o -o cmTC_2926a  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+        make[1]: Leaving directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-pRtCPi'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1447 (try_compile)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1491 (_MPI_try_staged_settings)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1814 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98"
+      binary: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98'
+        
+        Run Build Command(s): /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3cde1/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_3cde1.dir/build.make CMakeFiles/cmTC_3cde1.dir/build
+        make[1]: Entering directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98'
+        Building CXX object CMakeFiles/cmTC_3cde1.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -std=gnu++17 -pthread -o CMakeFiles/cmTC_3cde1.dir/test_mpi.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98/test_mpi.cpp
+        Linking CXX executable cmTC_3cde1
+        /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cde1.dir/link.txt --verbose=1
+        /usr/bin/c++ -pthread CMakeFiles/cmTC_3cde1.dir/test_mpi.cpp.o -o cmTC_3cde1  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+        make[1]: Leaving directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-8xxc98'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1447 (try_compile)"
+      - "/home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/share/cmake-4.2/Modules/FindMPI.cmake:1841 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec"
+      binary: "/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec'
+        
+        Run Build Command(s): /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_50782/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_50782.dir/build.make CMakeFiles/cmTC_50782.dir/build
+        make[1]: Entering directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec'
+        Building CXX object CMakeFiles/cmTC_50782.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -std=gnu++17 -pthread -o CMakeFiles/cmTC_50782.dir/test_mpi.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec/test_mpi.cpp
+        Linking CXX executable cmTC_50782
+        /home3/lspf78/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50782.dir/link.txt --verbose=1
+        /usr/bin/c++ -pthread CMakeFiles/cmTC_50782.dir/test_mpi.cpp.o -o cmTC_50782  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+        make[1]: Leaving directory '/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/CMakeScratch/TryCompile-i9EZec'
+        
+      exitCode: 0
+...

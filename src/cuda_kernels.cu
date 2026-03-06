@@ -43,18 +43,31 @@ void launch_vcopy(int n, const float* x, float* z, cudaStream_t stream) {
     CUDA_CHECK_LAST("k_vcopy");
 }
 
-// Reduction scaffold (students optimise this)
+// Reduction: two-stage (intra-block tree + warp-level shuffle, then iterative global accumulation)
+
 __global__ void k_reduce_block_sum(const float* __restrict__ x, float* __restrict__ partials, int n) {
     __shared__ float sdata[256];
     int tid = threadIdx.x;
     int i = blockIdx.x * blockDim.x + tid;
     sdata[tid] = (i < n) ? x[i] : 0.0f;
     __syncthreads();
-    for (int stride = blockDim.x/2; stride>0; stride/=2) {
-        if (tid < stride) sdata[tid] += sdata[tid+stride];
+
+    // Tree reduction down to 32 threads (one warp), syncing after each step
+    for (int stride = blockDim.x / 2; stride > 32; stride >>= 1) {
+        if (tid < stride) sdata[tid] += sdata[tid + stride];
         __syncthreads();
     }
-    if (tid == 0) partials[blockIdx.x] = sdata[0];
+
+    // Warp-level reduction via shuffle – no __syncthreads() needed within a warp
+    if (tid < 32) {
+        float val = sdata[tid];
+        val += __shfl_down_sync(0xffffffff, val, 16);
+        val += __shfl_down_sync(0xffffffff, val, 8);
+        val += __shfl_down_sync(0xffffffff, val, 4);
+        val += __shfl_down_sync(0xffffffff, val, 2);
+        val += __shfl_down_sync(0xffffffff, val, 1);
+        if (tid == 0) partials[blockIdx.x] = val;
+    }
 }
 
 float gpu_reduce_sum(const float* d_x, int n, cudaStream_t stream) {

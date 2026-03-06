@@ -15,4 +15,5 @@ mkdir -p build && cd build
 cmake ..
 cmake --build . -j
 
-mpirun -np 2 ./mpi_cuda_coursework --mode gemm --M 4096 --N 4096 --K 4096 --kernel tiled --csv results.csv
+mpirun -np 1 ./mpi_cuda_coursework --mode reduce --N 50000000 --csv results.csv
+mpirun -np 2 ./mpi_cuda_coursework --mode reduce --N 50000000 --csv results.csv
