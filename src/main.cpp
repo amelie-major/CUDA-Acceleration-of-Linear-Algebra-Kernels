@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 
     std::string mode = args.get("mode", "");
     if (mode.empty()) {
-        if (info.rank==0) std::cout << "Use --mode axpy|reduce|gemm\n";
+        if (info.rank==0) std::cout << "Use --mode axpy|vadd|vcopy|reduce|gemm\n";
         MPI_Finalize();
         return 0;
     }
@@ -79,6 +79,72 @@ int main(int argc, char** argv) {
         append_csv(csv, info.rank, "axpy", "axpy", N, 0, 0, 0, ms, 0.0, gbs);
 
         CUDA_CHECK(cudaFree(dx)); CUDA_CHECK(cudaFree(dy));
+    }
+    else if (mode == "vadd") {
+        long long N = args.get_ll("N", 10'000'000);
+        auto d = dist_1d(N, info.rank, info.size);
+
+        std::vector<float> x(d.N_local), y(d.N_local), z(d.N_local), zref(d.N_local);
+        fill_random(x, 1000 + info.rank);
+        fill_random(y, 2000 + info.rank);
+
+        float *dx=nullptr, *dy=nullptr, *dz=nullptr;
+        CUDA_CHECK(cudaMalloc(&dx, d.N_local*sizeof(float)));
+        CUDA_CHECK(cudaMalloc(&dy, d.N_local*sizeof(float)));
+        CUDA_CHECK(cudaMalloc(&dz, d.N_local*sizeof(float)));
+        CUDA_CHECK(cudaMemcpyAsync(dx, x.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
+        CUDA_CHECK(cudaMemcpyAsync(dy, y.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+
+        GpuTimer gt; gt.start(stream);
+        launch_vadd((int)d.N_local, dx, dy, dz, stream);
+        float ms = gt.stop(stream);
+
+        CUDA_CHECK(cudaMemcpyAsync(z.data(), dz, d.N_local*sizeof(float), cudaMemcpyDeviceToHost, stream));
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+
+        // CPU reference computed inline (single addition, no separate function needed)
+        for (int i = 0; i < (int)d.N_local; ++i) zref[i] = x[i] + y[i];
+        float err = max_abs_diff((int)d.N_local, z.data(), zref.data());
+
+        double bytes = 12.0 * (double)d.N_local;  // 2 reads + 1 write × 4 bytes
+        double gbs   = (bytes/1e9) / (ms/1e3);
+
+        if (info.rank==0) std::cout << "[VADD] ms="<<ms<<" GB/s="<<gbs<<" err="<<err<<"\n";
+        append_csv(csv, info.rank, "vadd", "vadd", N, 0, 0, 0, ms, 0.0, gbs);
+
+        CUDA_CHECK(cudaFree(dx)); CUDA_CHECK(cudaFree(dy)); CUDA_CHECK(cudaFree(dz));
+    }
+    else if (mode == "vcopy") {
+        long long N = args.get_ll("N", 10'000'000);
+        auto d = dist_1d(N, info.rank, info.size);
+
+        std::vector<float> x(d.N_local), z(d.N_local);
+        fill_random(x, 1000 + info.rank);
+
+        float *dx=nullptr, *dz=nullptr;
+        CUDA_CHECK(cudaMalloc(&dx, d.N_local*sizeof(float)));
+        CUDA_CHECK(cudaMalloc(&dz, d.N_local*sizeof(float)));
+        CUDA_CHECK(cudaMemcpyAsync(dx, x.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+
+        GpuTimer gt; gt.start(stream);
+        launch_vcopy((int)d.N_local, dx, dz, stream);
+        float ms = gt.stop(stream);
+
+        CUDA_CHECK(cudaMemcpyAsync(z.data(), dz, d.N_local*sizeof(float), cudaMemcpyDeviceToHost, stream));
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+
+        // z should be a bitwise copy of x — max_abs_diff must be 0
+        float err = max_abs_diff((int)d.N_local, z.data(), x.data());
+
+        double bytes = 8.0 * (double)d.N_local;  // 1 read + 1 write × 4 bytes
+        double gbs   = (bytes/1e9) / (ms/1e3);
+
+        if (info.rank==0) std::cout << "[VCOPY] ms="<<ms<<" GB/s="<<gbs<<" err="<<err<<"\n";
+        append_csv(csv, info.rank, "vcopy", "vcopy", N, 0, 0, 0, ms, 0.0, gbs);
+
+        CUDA_CHECK(cudaFree(dx)); CUDA_CHECK(cudaFree(dz));
     }
     else if (mode == "reduce") {
         long long N = args.get_ll("N", 50'000'000);
