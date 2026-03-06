@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.20)
 project(mpi_cuda_coursework LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -18,7 +18,7 @@ add_executable(mpi_cuda_coursework
   src/cuda_kernels.cu
 )
 
-target_include_directories(mpi_cuda_coursework PRIVATE include)
+target_include_directories(mpi_cuda_coursework PRIVATE include ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 target_link_libraries(mpi_cuda_coursework PRIVATE MPI::MPI_CXX)
 
 set_target_properties(mpi_cuda_coursework PROPERTIES
@@ -37,7 +37,7 @@ add_executable(mpi_cuda_tests
   src/cuda_kernels.cu
 )
 
-target_include_directories(mpi_cuda_tests PRIVATE include)
+target_include_directories(mpi_cuda_tests PRIVATE include ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 target_link_libraries(mpi_cuda_tests PRIVATE MPI::MPI_CXX)
 set_target_properties(mpi_cuda_tests PROPERTIES
   CUDA_SEPARABLE_COMPILATION ON
