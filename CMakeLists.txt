@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)//// CMakeLists.txt for MPI + CUDA coursework
+cmake_minimum_required(VERSION 3.20)
 project(mpi_cuda_coursework LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 17)

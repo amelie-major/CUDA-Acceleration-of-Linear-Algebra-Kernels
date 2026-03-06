@@ -1,5 +1,6 @@
 #include "benchmarks.hpp"
 #include <cstdio>
+// Appends a line of benchmark results to a CSV file at the given path.
 
 void append_csv(const std::string& path, int rank,
                 const std::string& mode, const std::string& kernel,

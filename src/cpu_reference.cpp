@@ -4,6 +4,13 @@
 void cpu_axpy(int n, float alpha, const float* x, float* y) {
     for (int i=0;i<n;++i) y[i] = alpha * x[i] + y[i];
 }
+void cpu_vadd(int n, const float* x, const float* y, float* z) {
+    for (int i=0;i<n;++i) z[i] = x[i] + y[i];
+}
+void cpu_vcopy(int n, const float* x, float* z) {
+    for (int i=0;i<n;++i) z[i] = x[i];
+}
+
 float cpu_reduce_sum(int n, const float* x) {
     double s = 0.0;
     for (int i=0;i<n;++i) s += x[i];

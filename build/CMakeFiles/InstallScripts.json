@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

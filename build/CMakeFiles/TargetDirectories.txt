@@ -1,0 +1,4 @@
+/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/mpi_cuda_coursework.dir
+/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/mpi_cuda_tests.dir
+/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/edit_cache.dir
+/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+-I"/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/include" -I"/apps/cuda/cuda-12.4/targets/x86_64-linux/include" -isystem "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi" -isystem "/usr/lib/x86_64-linux-gnu/openmpi/include"

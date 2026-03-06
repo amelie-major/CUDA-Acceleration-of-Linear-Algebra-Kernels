@@ -1,0 +1,2 @@
+rank,1,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,123.445374,GFLOPs,556.679,GBs,0.000
+rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,125.183998,GFLOPs,548.948,GBs,0.000
