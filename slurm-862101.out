@@ -1,0 +1,19 @@
+ERROR: Unable to locate a modulefile for 'openmpi'
+ERROR: Unable to locate a modulefile for 'cmake'
+CMake Error at CMakeLists.txt:1:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "////".
+
+
+-- Configuring incomplete, errors occurred!
+Error: could not find CMAKE_PROJECT_NAME in Cache
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./mpi_cuda_coursework
+Node: gpu4
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
