@@ -8,11 +8,39 @@ __global__ void k_axpy(int n, float alpha, const float* __restrict__ x, float* _
     if (i < n) y[i] = alpha * x[i] + y[i];
 }
 
+// AXPY launcher
 void launch_axpy(int n, float alpha, const float* x, float* y, cudaStream_t stream) {
     int block = 256;
     int grid = (n + block - 1) / block;
     k_axpy<<<grid, block, 0, stream>>>(n, alpha, x, y);
     CUDA_CHECK_LAST("k_axpy");
+}
+
+// Vector addition
+__global__ void k_vadd(int n, const float* __restrict__ x, const float* __restrict__ y, float* __restrict__ z) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < n) z[i] = x[i] + y[i];
+}
+
+// Vector addition launcher
+void launch_vadd(int n, const float* x, const float* y, float* z, cudaStream_t stream) {
+    int block = 256;
+    int grid = (n + block - 1) / block;
+    k_vadd<<<grid, block, 0, stream>>>(n, x, y, z);
+    CUDA_CHECK_LAST("k_vadd");
+}
+// Vector copy
+__global__ void k_vcopy(int n, const float* __restrict__ x, float* __restrict__ z) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < n) z[i] = x[i];
+}
+// Vector copy launcher
+
+void launch_vcopy(int n, const float* x, float* z, cudaStream_t stream) {
+    int block = 256;
+    int grid = (n + block - 1) / block;
+    k_vcopy<<<grid, block, 0, stream>>>(n, x, z);
+    CUDA_CHECK_LAST("k_vcopy");
 }
 
 // Reduction scaffold (students optimise this)
