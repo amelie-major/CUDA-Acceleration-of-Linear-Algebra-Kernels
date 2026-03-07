@@ -199,10 +199,12 @@ int main(int argc, char** argv) {
         build_counts_displs_rows(M, K, info.size, countsA, displsA);
 
         std::vector<float> A_local((size_t)d.M_local*K);
+        CpuTimer comm_timer; comm_timer.start();
         MPI_Scatterv(info.rank==0 ? A_full.data() : nullptr, countsA.data(), displsA.data(), MPI_FLOAT,
                      A_local.data(), (int)A_local.size(), MPI_FLOAT, 0, MPI_COMM_WORLD);
 
         MPI_Bcast(B.data(), (int)B.size(), MPI_FLOAT, 0, MPI_COMM_WORLD);
+        double ms_comm = comm_timer.stop() * 1e3;
 
         std::vector<float> C_local((size_t)d.M_local*Nmat, 0.0f);
         std::vector<float> C_ref((size_t)d.M_local*Nmat, 0.0f);
@@ -233,10 +235,18 @@ int main(int argc, char** argv) {
 
         double flops = 2.0 * (double)d.M_local * (double)Nmat * (double)K;
         double gflops = (flops/1e9) / (ms/1e3);
+        double ms_total = ms_comm + (double)ms;
 
-        if (info.rank==0) std::cout << "[GEMM] kernel="<<kernel<<" ms="<<ms<<" GFLOP/s(local)="<<gflops
+        // Reduce max comm and total times across ranks for rank-0 reporting
+        double ms_comm_max = 0.0, ms_total_max = 0.0;
+        MPI_Reduce(&ms_comm,  &ms_comm_max,  1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+        MPI_Reduce(&ms_total, &ms_total_max, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+
+        if (info.rank==0) std::cout << "[GEMM] ranks="<<info.size<<" kernel="<<kernel
+                                    <<" ms_compute="<<ms<<" ms_comm="<<ms_comm_max
+                                    <<" ms_total="<<ms_total_max<<" GFLOP/s(local)="<<gflops
                                     << (err>0 ? " err="+std::to_string(err) : "") << "\n";
-        append_csv(csv, info.rank, "gemm", kernel, 0, M, Nmat, K, ms, gflops, 0.0);
+        append_csv(csv, info.rank, "gemm", kernel, 0, M, Nmat, K, ms, gflops, 0.0, ms_comm, ms_total);
 
         CUDA_CHECK(cudaFree(dA)); CUDA_CHECK(cudaFree(dB)); CUDA_CHECK(cudaFree(dC));
     }
