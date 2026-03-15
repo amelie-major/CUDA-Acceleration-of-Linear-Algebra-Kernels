@@ -1,10 +1,10 @@
 #pragma once
 #include <cuda_runtime.h>
 
-// Vector
+// ── Part A1: vector operations ────────────────────────────────────────────────
 void launch_axpy(int n, float alpha, const float* x, float* y, cudaStream_t stream=0);
-void launch_vadd(int n, const float* x, const float* y, float* z, cudaStream_t stream=0);
-void launch_vcopy(int n, const float* x, float* z, cudaStream_t stream=0);
+void launch_add (int n, const float* x, const float* y, float* z, cudaStream_t stream=0);  // z = x + y
+void launch_copy(int n, const float* x, float* y, cudaStream_t stream=0);                  // y = x
 // Reduction
 float gpu_reduce_sum(const float* d_x, int n, cudaStream_t stream=0);
 

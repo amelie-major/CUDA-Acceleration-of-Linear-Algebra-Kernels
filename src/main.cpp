@@ -15,11 +15,15 @@
 #include "cpu_reference.hpp"
 #include "benchmarks.hpp"
 
-static void select_gpu_for_rank(int rank) {
-    int ndev=0;
+// With a single GPU all ranks share device 0.
+static void select_gpu() {
+    int ndev = 0;
     CUDA_CHECK(cudaGetDeviceCount(&ndev));
-    if (ndev==0) MPI_Abort(MPI_COMM_WORLD, 1);
-    CUDA_CHECK(cudaSetDevice(rank % ndev));
+    if (ndev == 0) {
+        std::fprintf(stderr, "No CUDA device found. Aborting.\n");
+        MPI_Abort(MPI_COMM_WORLD, 1);
+    }
+    CUDA_CHECK(cudaSetDevice(0));   // always use GPU 0
 }
 
 static void fill_random(std::vector<float>& v, int seed) {
@@ -40,7 +44,7 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    select_gpu_for_rank(info.rank);
+    select_gpu();
     // A single CUDA stream serialises GPU work on this rank.
     cudaStream_t stream; CUDA_CHECK(cudaStreamCreate(&stream));
 
@@ -60,6 +64,13 @@ int main(int argc, char** argv) {
         CUDA_CHECK(cudaMalloc(&dx, d.N_local*sizeof(float)));
         CUDA_CHECK(cudaMalloc(&dy, d.N_local*sizeof(float)));
         CUDA_CHECK(cudaMemcpyAsync(dx, x.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
+        CUDA_CHECK(cudaMemcpyAsync(dy, y.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+
+        // ── Warm-up (not timed) ───────────────────────────────────────────────
+        launch_axpy((int)d.N_local, alpha, dx, dy, stream);
+        CUDA_CHECK(cudaStreamSynchronize(stream));
+        // Re-upload y so timing run starts from a clean state
         CUDA_CHECK(cudaMemcpyAsync(dy, y.data(), d.N_local*sizeof(float), cudaMemcpyHostToDevice, stream));
         CUDA_CHECK(cudaStreamSynchronize(stream));
 
@@ -98,7 +109,7 @@ int main(int argc, char** argv) {
         CUDA_CHECK(cudaStreamSynchronize(stream));
 
         GpuTimer gt; gt.start(stream);
-        launch_vadd((int)d.N_local, dx, dy, dz, stream);
+        launch_add((int)d.N_local, dx, dy, dz, stream);
         float ms = gt.stop(stream);
 
         CUDA_CHECK(cudaMemcpyAsync(z.data(), dz, d.N_local*sizeof(float), cudaMemcpyDeviceToHost, stream));
@@ -130,7 +141,7 @@ int main(int argc, char** argv) {
         CUDA_CHECK(cudaStreamSynchronize(stream));
 
         GpuTimer gt; gt.start(stream);
-        launch_vcopy((int)d.N_local, dx, dz, stream);
+        launch_copy((int)d.N_local, dx, dz, stream);
         float ms = gt.stop(stream);
 
         CUDA_CHECK(cudaMemcpyAsync(z.data(), dz, d.N_local*sizeof(float), cudaMemcpyDeviceToHost, stream));
