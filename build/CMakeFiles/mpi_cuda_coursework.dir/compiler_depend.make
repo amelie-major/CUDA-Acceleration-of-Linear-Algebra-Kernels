@@ -90,11 +90,16 @@ CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: /home3/lspf78/CUDA-Acce
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
@@ -132,6 +137,7 @@ CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: /home3/lspf78/CUDA-Acce
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
@@ -253,11 +259,15 @@ CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.o: /home3/lspf78/CUDA-A
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -418,14 +428,22 @@ CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o: /home3/lspf78/CUDA-Acc
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
@@ -669,17 +687,25 @@ CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o: /home3/lspf78/CUDA-Accelerati
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
@@ -718,6 +744,7 @@ CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o: /home3/lspf78/CUDA-Accelerati
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -911,11 +938,18 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
@@ -953,6 +987,7 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
@@ -1103,6 +1138,10 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
@@ -1119,11 +1158,27 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/include/check_cuda.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_types.h:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_functions.hpp:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_functions.h:
+
+/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/status_inln.h:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/texture_types.h:
+
+/usr/include/c++/11/cwctype:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/texture_indirect_functions.h:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/surface_types.h:
 
 /usr/lib/x86_64-linux-gnu/openmpi/include/mpi.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -1140,8 +1195,6 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/device_atomic_functions.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -1171,6 +1224,8 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/library_types.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/backward/binders.h:
@@ -1180,6 +1235,8 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/request_inln.h:
 
@@ -1235,8 +1292,6 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/cudacc_ext.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
 /usr/include/c++/11/type_traits:
 
 /usr/include/c++/11/tuple:
@@ -1255,15 +1310,15 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/host_config.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
-
 /usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/include/c++/11/bits/move.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/surface_indirect_functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
 
@@ -1320,8 +1375,6 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/c++/11/ext/atomicity.h:
-
-/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
@@ -1429,23 +1482,21 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /usr/include/features.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/c++/11/stdexcept:
-
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
-
 /usr/include/c++/11/cctype:
 
 /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/intercomm.h:
 
 /usr/include/c++/11/unordered_map:
 
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/11/cerrno:
 
 /usr/include/c++/11/cstdio:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/c++/11/cwchar:
 
@@ -1479,7 +1530,21 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /usr/include/c++/11/initializer_list:
 
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/c++/11/bits/predefined_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/c++/11/bits/specfun.h:
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/common_functions.h:
 
@@ -1543,11 +1608,11 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /usr/include/c++/11/bits/refwrap.h:
 
-/usr/include/c++/11/bits/specfun.h:
-
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -1603,13 +1668,9 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /usr/include/c++/11/vector:
 
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_functions.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/math.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/vector_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -1618,6 +1679,8 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -1632,6 +1695,16 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/usr/include/c++/11/debug/assertions.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+
+/apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/sm_80_rt.h:
 
 /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/cuda_kernels.cu:
 
@@ -1655,12 +1728,6 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/host_defines.h:
 
-/usr/include/c++/11/debug/assertions.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/sm_80_rt.h:
-
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/sm_90_rt.h:
 
 /usr/include/c++/11/functional:
@@ -1668,14 +1735,6 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/linux/errno.h:
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/crt/sm_90_rt.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/surface_indirect_functions.h:
-
-/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/status_inln.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/texture_types.h:
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/cuda_runtime.h:
 
@@ -1708,9 +1767,3 @@ CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o: /home3/lspf78/CUD
 /usr/include/c++/11/bits/string_view.tcc:
 
 /apps/cuda/cuda-12.4/targets/x86_64-linux/include/sm_61_intrinsics.h:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/surface_types.h:
-
-/usr/include/c++/11/cwctype:
-
-/apps/cuda/cuda-12.4/targets/x86_64-linux/include/texture_indirect_functions.h:

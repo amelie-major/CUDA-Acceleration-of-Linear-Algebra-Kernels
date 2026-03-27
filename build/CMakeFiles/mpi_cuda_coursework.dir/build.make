@@ -114,25 +114,11 @@ CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/cpu_reference.cpp -o CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.s
 
-CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: CMakeFiles/mpi_cuda_coursework.dir/flags.make
-CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp
-CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: CMakeFiles/mpi_cuda_coursework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o -MF CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o.d -o CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp
-
-CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp > CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i
-
-CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp -o CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s
-
 CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o: CMakeFiles/mpi_cuda_coursework.dir/flags.make
 CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o: CMakeFiles/mpi_cuda_coursework.dir/includes_CUDA.rsp
 CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o: /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/cuda_kernels.cu
 CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o: CMakeFiles/mpi_cuda_coursework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o"
 	/apps/cuda/cuda-12.4/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o -MF CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o.d -x cu -rdc=true -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/cuda_kernels.cu -o CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o
 
 CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.i: cmake_force
@@ -143,13 +129,27 @@ CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
+CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: CMakeFiles/mpi_cuda_coursework.dir/flags.make
+CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp
+CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o: CMakeFiles/mpi_cuda_coursework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o -MF CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o.d -o CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o -c /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp
+
+CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp > CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i
+
+CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/src/benchmarks.cpp -o CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s
+
 # Object files for target mpi_cuda_coursework
 mpi_cuda_coursework_OBJECTS = \
 "CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o" \
 "CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o" \
 "CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.o" \
-"CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o" \
-"CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o"
+"CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o" \
+"CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o"
 
 # External object files for target mpi_cuda_coursework
 mpi_cuda_coursework_EXTERNAL_OBJECTS =
@@ -157,8 +157,8 @@ mpi_cuda_coursework_EXTERNAL_OBJECTS =
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.o
-CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o
+CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: CMakeFiles/mpi_cuda_coursework.dir/build.make
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
 CMakeFiles/mpi_cuda_coursework.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
@@ -177,8 +177,8 @@ mpi_cuda_coursework_OBJECTS = \
 "CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o" \
 "CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o" \
 "CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.o" \
-"CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o" \
-"CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o"
+"CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o" \
+"CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o"
 
 # External object files for target mpi_cuda_coursework
 mpi_cuda_coursework_EXTERNAL_OBJECTS =
@@ -186,8 +186,8 @@ mpi_cuda_coursework_EXTERNAL_OBJECTS =
 mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/main.cpp.o
 mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/mpi_distribution.cpp.o
 mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/cpu_reference.cpp.o
-mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o
 mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/cuda_kernels.cu.o
+mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o
 mpi_cuda_coursework: CMakeFiles/mpi_cuda_coursework.dir/build.make
 mpi_cuda_coursework: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
 mpi_cuda_coursework: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so

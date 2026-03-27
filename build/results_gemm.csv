@@ -1,0 +1,8 @@
+rank,0,mode,gemm,kernel,naive,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,156.114944,GFLOPs,880.370,GBs,0.000,ms_comm,25.597225,ms_total,181.712169
+rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,117.405441,GFLOPs,1170.635,GBs,0.000,ms_comm,25.522046,ms_total,142.927487
+rank,0,mode,gemm,kernel,naive,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,154.651932,GFLOPs,888.699,GBs,0.000,ms_comm,25.787386,ms_total,180.439318
+rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,119.445663,GFLOPs,1150.640,GBs,0.000,ms_comm,26.155020,ms_total,145.600683
+rank,0,mode,gemm,kernel,naive,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,153.198975,GFLOPs,897.127,GBs,0.000,ms_comm,25.883785,ms_total,179.082760
+rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,117.055267,GFLOPs,1174.137,GBs,0.000,ms_comm,26.276238,ms_total,143.331505
+rank,0,mode,gemm,kernel,naive,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,154.677383,GFLOPs,888.552,GBs,0.000,ms_comm,25.921139,ms_total,180.598522
+rank,0,mode,gemm,kernel,tiled,N,0,M,4096,Nmat,4096,K,4096,ms_gpu,119.451645,GFLOPs,1150.582,GBs,0.000,ms_comm,25.958285,ms_total,145.409930

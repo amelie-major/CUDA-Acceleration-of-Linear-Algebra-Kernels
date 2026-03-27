@@ -148,6 +148,7 @@ src/benchmarks.o: src/benchmarks.cpp.o
 # target to build an object file
 src/benchmarks.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_coursework.dir/build.make CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_tests.dir/build.make CMakeFiles/mpi_cuda_tests.dir/src/benchmarks.cpp.o
 .PHONY : src/benchmarks.cpp.o
 
 src/benchmarks.i: src/benchmarks.cpp.i
@@ -156,6 +157,7 @@ src/benchmarks.i: src/benchmarks.cpp.i
 # target to preprocess a source file
 src/benchmarks.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_coursework.dir/build.make CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_tests.dir/build.make CMakeFiles/mpi_cuda_tests.dir/src/benchmarks.cpp.i
 .PHONY : src/benchmarks.cpp.i
 
 src/benchmarks.s: src/benchmarks.cpp.s
@@ -164,6 +166,7 @@ src/benchmarks.s: src/benchmarks.cpp.s
 # target to generate assembly for a file
 src/benchmarks.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_coursework.dir/build.make CMakeFiles/mpi_cuda_coursework.dir/src/benchmarks.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_cuda_tests.dir/build.make CMakeFiles/mpi_cuda_tests.dir/src/benchmarks.cpp.s
 .PHONY : src/benchmarks.cpp.s
 
 src/cpu_reference.o: src/cpu_reference.cpp.o

@@ -7,11 +7,11 @@ CUDA_DEFINES =
 
 CUDA_INCLUDES = --options-file CMakeFiles/mpi_cuda_coursework.dir/includes_CUDA.rsp
 
-CUDA_FLAGS = -std=c++17 -arch=native -Wall -Wextra -Wpedantic -lineinfo -Xcompiler -pthread
+CUDA_FLAGS = -O3 -DNDEBUG -std=c++17 "--generate-code=arch=compute_70,code=[compute_70,sm_70]" "--generate-code=arch=compute_80,code=[compute_80,sm_80]" -Wall -Wextra -lineinfo -Xcompiler -pthread
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/home3/lspf78/CUDA-Acceleration-of-Linear-Algebra-Kernels/include -I/apps/cuda/cuda-12.4/targets/x86_64-linux/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include
 
-CXX_FLAGS = -std=gnu++17 -Wall -Wextra -Wpedantic -pthread
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -pthread
 

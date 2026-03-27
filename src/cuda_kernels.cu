@@ -50,7 +50,7 @@ __global__ void k_reduce_block_sum(const float* __restrict__ x, float* __restric
     __syncthreads();
 
     // Tree reduction down to 32 threads (one warp), syncing after each step
-    for (int stride = blockDim.x / 2; stride > 32; stride >>= 1) {
+    for (int stride = blockDim.x / 2; stride >= 32; stride >>= 1) {
         if (tid < stride) sdata[tid] += sdata[tid + stride];
         __syncthreads();
     }
